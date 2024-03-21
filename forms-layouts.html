@@ -254,16 +254,16 @@
         </ol>
       </nav>
     </div><!-- End Page Title -->
-
-    <div class="row mb-5">
-      <label class="col-sm-2 col-form-label"></label>
-      <div class="col-sm-10">
+    <div class="col-lg-6">
+      <div>
         <div class="form-check form-switch">
-          <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-          <label class="form-check-label" for="flexSwitchCheckDefault">Preencher e gerar PDF</label>
+          <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" checked>
+          <label class="form-check-label" for="flexSwitchCheckDefault">Preencher e gerar PDF manualmente</label>
+            <button type="button" class="btn btn-primary rounded-pill">Preencher</button>
+            <button type="button" class="btn btn-secondary">Gerar</button>
         </div>
         <div class="form-check form-switch">
-          <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+          <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
           <label class="form-check-label" for="flexSwitchCheckChecked">Sicronizado com a Alexa</label>
       </div>
     </div>
@@ -284,6 +284,10 @@
           <button type="button" class="btn btn-danger mb-2">
             Estoque vazio <span class="badge bg-white text-danger">1</span>
           </button>
+
+          <!-- Lista -->
+          <div class="col-12">
+            <div class="card Cadastro overflow-auto">
 
                   <table class="table">
                     <thead>
@@ -337,7 +341,7 @@
                 </div>
 
               </div>
-            </div><!-- End Recent Sales -->
+            </div><!-- End Lista -->
 
   </main><!-- End #main -->
 
