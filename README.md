@@ -3,7 +3,7 @@
 ## Sobre o Projeto
 Este projeto acadêmico é uma aplicação em desenvolvimento para simplificar a experiência de compra em supermercados. O FeiraFácil foi concebido para oferecer funcionalidades que ajudam os usuários a gerenciar suas despensas, criar listas de compras personalizadas e até mesmo integrar-se com assistentes de voz como a Alexa. Além disso, a funcionalidade de enviar listas de compras para supermercados parceiros está em desenvolvimento para proporcionar uma experiência de compra ainda mais conveniente.
 
-Nota: Este projeto foi criado com base em um layout e o projeto está em fase de desenvolvimento.
+Nota: Este projeto foi criado em cima de um layout HTML e o projeto está em fase de desenvolvimento.
 
 ## Funcionalidades
 - Gestão da despensa: Cadastre os produtos essenciais e suas quantidades na despensa.
