@@ -29,6 +29,15 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+   <!-- Mapa -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+                <style>
+                    #map {
+                        height: 100vh;
+                        width: 100%;
+                    }
+                </style>
+
   <!-- =======================================================
   * Template Name: NiceAdmin
   * Updated: Mar 10 2024 with Bootstrap v5.3.3
@@ -210,7 +219,7 @@
         </a>
         <ul id="forms-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
           <li>
-            <a href="produtos-cadastro.html" class="active">
+            <a href="produtos-cadastro.html">
               <i class="bi bi-circle"></i><span>Cadastro</span>
             </a>
           </li>
@@ -230,6 +239,7 @@
           <span>Busca</span>
         </a>
       </li><!-- End Busca Page Nav -->
+
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="perfil.html">
@@ -256,8 +266,8 @@
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item">Produtos</li>
-          <li class="breadcrumb-item active">Cadastro</li>
+          <li class="breadcrumb-item">Pages</li>
+          <li class="breadcrumb-item active">Busca</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
@@ -266,115 +276,66 @@
 
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Cadastro</h5>
-              <p>Nesta aba você deve Cadastrar todos os Produtos que são necessários na sua casa com suas devidas quantidades.</p>
+              <h5 class="card-title">Supermercados próximos</h5>
+              <p>Nesta aba você encontrá os mercados próximos a você de acordo com sua localização em tempo real.</p>
 
-              <!-- Cadastro -->
-              <form class="row g-3 needs-validation" novalidate>
-                <div class="col-md-3">
-                  <label for="validationCustom01" class="form-label">Produto</label>
-                  <input type="text" class="form-control" id="validationCustom01" value="" required>
-                  <div class="valid-feedback">
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <label for="validationCustom04" class="form-label">Setorização</label>
-                  <select class="form-select" id="validationCustom04" required>
-                    <option selected disabled value=""></option>
-                    <option>Açougue</option>
-                    <option>Frios e Laticínios</option>
-                    <option>Adega e Bebidas</option>
-                    <option>Higiene e Limpeza</option>
-                    <option>Mercearia</option>
-                    <option>Hortifruti</option>
-                    <option>Padaria</option>
-                  </select>
-                  <div class="invalid-feedback">
-                    Por favor selecione um Setor!
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <label for="validationCustom04" class="form-label">Medidas</label>
-                  <select class="form-select" id="validationCustom04" required>
-                    <option selected disabled value=""></option>
-                    <option>Pacotes</option>
-                    <option>Caixas</option>
-                    <option>Kg</option>
-                    <option>g</option>
-                  </select>
-                  <div class="invalid-feedback">
-                    Por favor selecione uma Medida!
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <label for="validationCustom03" class="form-label">Quantidade</label>
-                  <input type="text" class="form-control" id="validationCustom03" required>
-                  <div class="invalid-feedback">
-                    Campo obrigatório!
-                  </div>
-                </div>
-                <div class="col-12">
-                  <button class="btn btn-primary" class="btn btn-success"><i class="bi bi-check-circle"></i> Cadastrar Produto</button>
-                </div>
-              </form><!-- End Cadastro -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Produtos Cadastrados -->
-            <div class="col-12">
-              <div class="card Cadastro overflow-auto">
-
-                <div class="card-body">
-                  <h5 class="card-title">Produtos <span>| Cadastrados</span></h5>
-
-                  <table class="table">
-                    <thead>
-                      <tr>
-                        <th scope="col">Produto</th>
-                        <th scope="col">Setor</th>
-                        <th scope="col">Quantidade</th>
-                        <th scope="col">Medida</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row"><a href="#" class="text-primary">Carne</a></th>
-                        <td><a href="#" class="text-primary">Açougue</a></td>
-                        <td>7</td>
-                        <td>Kg</td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#" class="text-primary">Feijão</a></th>
-                        <td><a href="#" class="text-primary">Mercearia</a></td>
-                        <td>7</td>
-                        <td>Pacotes</td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#" class="text-primary">Queijo</a></th>
-                        <td><a href="#" class="text-primary">Frios e Laticínios</a></td>
-                        <td>500</td>
-                        <td>g</td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#" class="text-primary">Papel higiênico</a></th>
-                        <td><a href="#" class="text-primary">Higiene e Limpeza</a></td>
-                        <td>2</td>
-                        <td>Pacotes</td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#" class="text-primary">Leite</a></th>
-                        <td><a href="#" class="text-primary">Adega e Bebidas</a></td>
-                        <td>5</td>
-                        <td>Caixas</td>
-                      </tr>
-                    </tbody>
-                  </table>
-
-                </div>
-
-              </div>
-            </div><!-- End Produtos Cadastrados -->
+              <!-- Busca -->
+                <div id="map"></div>
+                <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+                <script>
+                    var map = L.map('map').setView([-8.047562, -34.877002], 13); // Define as coordenadas de Recife
+            
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        maxZoom: 19,
+                    }).addTo(map);
+            
+                    // Adicione um marcador para a localização do usuário
+                    navigator.geolocation.getCurrentPosition(function (position) {
+                        var userLat = position.coords.latitude;
+                        var userLng = position.coords.longitude;
+            
+                        var data = {
+                            "includedTypes": ["supermarket"],
+                            "maxResultCount": 10,
+                            "locationRestriction": {
+                                "circle": {
+                                "center": {
+                                    "latitude": userLat,
+                                    "longitude": userLng
+                                    },
+                                "radius": 2500.0
+                                }
+                            }
+                        }
+            
+                        L.marker([userLat, userLng]).addTo(map)
+                            .bindPopup('Sua Localização Atual')
+                            .openPopup();
+            
+                            fetch('https://places.googleapis.com/v1/places:searchNearby', { method: "POST", headers: {"Content-Type": "application/json", "X-Goog-Api-Key": "Minha API-KEY", "X-Goog-FieldMask": "places.location,places.displayName" }, body: JSON.stringify(data), })
+                            .then(response => {
+                                if (!response.ok) {
+                                    throw new Error('Network response was not ok');
+                                }
+                                return response.json();
+                            })
+                            .then(data => {
+                                data.places.forEach(function (place) {
+                                    L.marker([place.location.latitude, place.location.longitude]).addTo(map).bindPopup(place.displayName.text);
+                                })
+                            })
+                            .catch(error => {
+                                document.getElementById('supermarktsList').innerHTML = '<p>Ocorreu um erro ao carregar supermercados próximos.</p>';
+                                console.error('Fetch error:', error);
+                            });
+                    });
+            
+                    // Atualize o tamanho do mapa quando a janela for redimensionada
+                    window.addEventListener('resize', function () {
+                        map.invalidateSize();
+                    });
+                </script>
+                <!-- End Produtos Cadastrados -->
 
   </main><!-- End #main -->
 
